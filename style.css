@@ -19,8 +19,9 @@ header {
 
 #profile-pic {
     width: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    height: 150px;      /* force equal height */
+    object-fit: cover;  /* prevents distortion */
+    border-radius: 0;   /* removes circle */
 }
 
 section {
