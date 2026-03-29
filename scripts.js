@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const Skillset = document.getElementById("Skill-set");
     // Path to your local image
-    Skillset.src = "images/Skillset.jpg";
+    Skillset.src = "images/skillset.jpg";
 
 });
