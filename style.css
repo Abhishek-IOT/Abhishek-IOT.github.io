@@ -1,18 +1,13 @@
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
     background: #f5f5f5;
     text-align: center;
 }
 
-header {
-    background: #111;
-    color: white;
-    padding: 20px;
-}
-
+/* HERO */
 .hero {
-    padding: 40px;
+    padding: 40px 20px;
     background: #222;
     color: white;
 }
@@ -22,64 +17,102 @@ header {
     align-items: center;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap; /* key for responsiveness */
 }
 
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+.hero-content {
+    max-width: 500px;
 }
 
 #profile-pic {
     width: 150px;
-    height: 150px;      /* force equal height */
-    object-fit: cover;  /* prevents distortion */
-    border-radius: 20px;   /* removes circle */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-
-#Skill-set {
-    width: 1200px;
-    height: 300px;      /* force equal height */
-    object-fit: cover;  /* prevents distortion */
-    border-radius: 20px;   /* removes circle */
+/* SKILL BANNER */
+.skill-banner img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 10px;
 }
 
+/* SECTIONS */
 section {
-    padding: 40px;
+    padding: 40px 20px;
 }
 
+/* SKILLS GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
 }
 
 .grid div {
     background: white;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
+/* PROJECT CARDS */
 .card {
     background: white;
     padding: 20px;
-    margin: 10px;
+    margin: 15px auto;
     border-left: 5px solid orange;
+    max-width: 600px;
+    text-align: left;
+    border-radius: 8px;
+}
+
+/* CERTIFICATIONS */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
 }
 
 .card1 {
     background: white;
-    padding: 2px;
-    margin: 1px;
-    font-weight: bolder;
-    border-left: 2px solid orange;
-     text-align: left;
+    padding: 10px;
+    border-left: 3px solid orange;
+    text-align: left;
+    border-radius: 5px;
 }
 
+/* FOOTER */
 footer {
     background: #111;
     color: white;
     padding: 15px;
+}
+
+/* 🔥 MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    #profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card {
+        margin: 10px;
+    }
+
+    section {
+        padding: 25px 15px;
+    }
 }
