@@ -3,4 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Path to your local image
     profilePic.src = "images/profile.jpeg";
+
+    const Skillset = document.getElementById("Skill-set");
+    // Path to your local image
+    Skillset.src = "images/Skillset.jpg";
+
 });
